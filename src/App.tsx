@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Example from "./Example";
+import ExampleWithEffect from "./ExampleWithEffect";
 
 const App: React.FC = () => {
   return (
@@ -19,8 +21,15 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <Example
+        items={[{ id: 1, text: "foo" }, { id: 2, text: "bar" }]}
+        func={text => {
+          console.log(text);
+        }}
+      />
+      <ExampleWithEffect str="hoge" />
     </div>
   );
-}
+};
 
 export default App;
